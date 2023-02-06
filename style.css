@@ -62,7 +62,7 @@
     background-color: black;
     z-index: 10;
 }
-.clock .number {
+.clock .numbers {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -152,7 +152,7 @@
     box-shadow: 3px 3px 3px #17181c,
     -3px -3px 3px #676e7e;
 }
-.output {
+.display {
     font-size: 3.4em;
     text-align: right;
     padding-top: 1.5rem;
@@ -164,17 +164,39 @@
     display: block;
     outline: none;
     background: transparent;
-    color: #ffffff;
+    color: #000;
     box-shadow: inset 3px 3px 3px #17181c,
 inset -3px -3px #676e7e;
 }
+.display {
+    background-color: rgb(182, 182, 182);
+    height: 100px;
+    width: 100%;
+    text-align: right;
+    padding: 20px;
+    font-size: 30px;
+    position: relative;
+}
+.display-1 {
+    opacity: 0.4;
+    font-size: 20px;
+    height: 20px;
+    overflow: hidden;
+}
+.temp-result {
+    position: absolute;
+    bottom: 0;
 
-.keys {
+    font-size: 20px;
+    opacity: 0.3;
+}
+
+.all_button {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 3px;
 }
-.key {
+.button {
     background: #3b3f48;
     border: none;
     font-size: 1.5rem;
@@ -183,25 +205,33 @@ inset -3px -3px #676e7e;
     height: 70px;
     border-radius: 30px;
     margin: 0.3rem;
+    padding-left: 27px;
+    padding-top: 22px;
     cursor: pointer;
     box-shadow:  3px 3px 3px #17181c,
      -3px -3px 3px #676e7e;
 }
 
-.key:active,
-.key:focus {
+.button:active,
+.button:focus {
     background: #3b3f48;
     box-shadow: inset 3px 3px 3px #17181c,
     inset -3px -3px 3px #676e7e;
 }
-.key-op {
+.operation {
     color: cyan;
+    padding-left: 30px;
 }
-.key-ent {
+.equal {
     grid-column: 4/5;
     grid-row: 2 / span 4;
     height: auto;
     border-radius: 30px;
     color: cyan;
+    padding-top: 140px;
     background: #3b3f48;
 }
+
+
+
+
